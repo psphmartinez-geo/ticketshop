@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TicketShop</title>
+</head>
+<body>
+    <h1>🎟️ TicketShop</h1>
+
+    <form action="/search" method="get">
+        <input type="text" name="q" placeholder="Buscar evento...">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <h2>Eventos disponibles</h2>
+    <ul>
+        {% for e in events %}
+            <li>{{ e['name'] }} - {{ e['venue'] }} - ${{ e['price'] }}</li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="/login">Iniciar sesión</a></p>
+</body>
+</html>
