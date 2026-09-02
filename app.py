@@ -224,6 +224,7 @@
  
  if __name__ == "__main__":
      init_db()
+  print("Prueba Semgrep")
 -    os.makedirs("tickets", exist_ok=True)
 -    # VULNERABLE: modo debug habilitado (expone Werkzeug debugger / RCE)
 -    app.run(host="0.0.0.0", port=5000, debug=True)
